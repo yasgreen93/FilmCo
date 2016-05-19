@@ -1,1 +1,43 @@
 /* Empty. Add your own CSS if you like */
+
+.bar.bar-stable {
+  background-color: #7947AC;
+}
+
+.bar.bar-stable .title {
+  color: #FFF;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+ion-content {
+  background-color: #FFF;
+}
+
+.scanBtn {
+  background-color: #D1F359;
+  color: #7947AC;
+  left: 30%;
+  top: 25px;
+  width: 150px;
+  height: 80px;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.bcNumsList {
+  font-size: 18px;
+}
+
+li {
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 30px;
+  color: #7947AC;
+}
+
+a {
+  text-decoration: none;
+  color: #7947AC;
+}
