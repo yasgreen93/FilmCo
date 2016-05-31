@@ -12,24 +12,24 @@ filmCo.controller("FilmCoController", ['$scope', '$cordovaBarcodeScanner', '$htt
     //   });
     // };
 
-    // $scope.scanBarcode = function() {
-    //   $cordovaBarcodeScanner.scan().then(function(imageData) {
-    //     filmCoAwsService.itemLookup(imageData.text)
-    //       .then(function(response) {
-    //         filmInfo.push(response);
-    //       });
-    //   });
-    // };
-
     $scope.scanBarcode = function() {
-      console.log("Controller called...");
-      return filmCoAwsService.itemLookup(5050582556148)
-        .then(function(response) {
-          console.log("Response...");
-          console.log(response);
-          self.filmInfo.push(response);
-        });
+      $cordovaBarcodeScanner.scan().then(function(imageData) {
+        filmCoAwsService.itemLookup(imageData.text)
+          .then(function(response) {
+            self.filmInfo.push(response.data["Items"]);
+          });
+      });
     };
+
+    // $scope.scanBarcode = function() {
+    //   console.log("Controller called...");
+    //   return filmCoAwsService.itemLookup(9781934356371)
+    //     .then(function(response) {
+    //       console.log("Response...");
+    //       console.log(response);
+    //       self.filmInfo.push(response.data["Items"]);
+    //     });
+    // };
 
     // $scope.scanBarcode = function() {
     //   $cordovaBarcodeScanner.scan()

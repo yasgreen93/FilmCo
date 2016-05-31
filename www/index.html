@@ -38,21 +38,15 @@
 
         <section>
           <ul class="bcNumsList">
-            <li ng-repeat="number in ctrl.barcodeNums">
-              <strong>Number:</strong> {{ number }}
-            </li>
-          </ul>
-        </section>
-
-        <!-- <section>
-          <ul class="bcNumsList">
             <li ng-repeat="info in ctrl.filmInfo">
-              <strong>Name:</strong> {{ info.name }} <br> <br>
-              <strong>Cast:</strong> {{ info.attributes.Cast }}
+              <strong>Title:</strong> {{ info.Item.ItemAttributes.Title }} <br> <br>
+              <strong>Director:</strong> {{ info.Item.ItemAttributes.Director }} <br> <br>
+              <strong>Actors:</strong> {{ info.Item.ItemAttributes.Actor }} <br> <br>
+              <strong>Amazon URL:</strong> <a href="{{ info.Item.DetailPageURL }}">{{ info.Item.ItemAttributes.Title }} on Amazon</a>
               <hr>
             </li>
           </ul>
-        </section> -->
+        </section>
 
 
       </ion-content>
