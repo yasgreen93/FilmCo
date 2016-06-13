@@ -2,7 +2,6 @@ filmCo.service('filmCoAwsService', ["$http", function($http) {
     var self = this;
 
     self.itemLookup = function(imageData) {
-      console.log("service called...");
       var barcode = { barcodeNum: imageData };
       var url = "https://filmco-backend-server.herokuapp.com/films/api";
       var data = JSON.stringify(barcode);
